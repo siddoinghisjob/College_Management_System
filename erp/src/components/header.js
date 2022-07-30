@@ -1,8 +1,7 @@
 import { UserIcon} from "@heroicons/react/solid";
-import { useStore } from "./store/store.js"
 
-function Header() {
-  const pageUpdate = useStore((state) => state.changePage)
+function Header(props) {
+  const pageUpdate = props.func
   return (
     <div className="grid sm:gird-rows-3 grid-row-1 bg-header shadow-xl left-0 md:text-left h-auto p-2 w-screen">
       <span className="left-0 sm:left-auto">
